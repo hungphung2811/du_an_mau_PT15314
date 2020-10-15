@@ -81,5 +81,5 @@ hinh.onchange = function () {
 }
 var render = new FileReader();
 render.onload = function (e) {
-    document.getElementById('result_image').innerHTML = '<img class="img-fluid" width="200" src="' + e.target.result + '"/>';
+    document.getElementById('result_image').innerHTML = '<img class="img-fluid" width="100" src="' + e.target.result + '"/>';
 };

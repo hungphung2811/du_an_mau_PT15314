@@ -52,54 +52,51 @@
 </head>
 
 <body>
-
-    <div class="container-fluid px-0">
-        <header class="bg-info p-3 pb-4 text-light jumbotron shadow">
-            <div class="d-flex justify-content-center">
-                <div class="mr-5">
-                    <img src="https://salt.tikicdn.com/ts/banner/33/ba/89/54c02d2475983f93a024c0cd13f238e4.png" alt="logo tiki ">
-                </div>
-                <div class="form-group form-inline">
-                    <form action="<?= $SITE_URL ?>/hang-hoa/liet-ke.php">
-                        <input class="form-control" name="keywords" placeholder="Từ khóa tìm kiếm">
-                        <button class="btn btn-primary">search</button>
-                    </form>
-                </div>
-                <div class="ml-5">
-                    <a class="d-inline-block nav-link pl-0 text-light" href="<?= $SITE_URL ?>/tai-khoan/dang-nhap.php">Đăng nhập</a>
-                    <a class="d-inline-block nav-link pl-0 text-light" href="<?= $SITE_URL ?>/tai-khoan/dang-ky.php">Đăng ký</a>
-                    <a class="d-inline-block nav-link pl-0 text-light" href="<?= $SITE_URL ?>/tai-khoan/dang-nhap.php?btn_logoff">Đăng xuất</a>
-                    <?php
-                    if (isset($_SESSION['user'])) {
-                        if ($_SESSION['user']['vai_tro'] == TRUE) {
-                    ?>
-                            <a class="d-inline-block nav-link pl-0 text-light" href='<?= $ADMIN_URL ?>/trang-chinh'>Quản trị website</a>
-                    <?php
-                        }
+    <header class="bg-info p-3 pb-4 text-light jumbotron shadow">
+        <div class="d-flex justify-content-start ml-5">
+            <div class="mr-5 ml-5">
+                <img class="ml-5" src="https://salt.tikicdn.com/ts/banner/33/ba/89/54c02d2475983f93a024c0cd13f238e4.png" alt="logo tiki ">
+            </div>
+            <div class="form-group form-inline">
+                <form class="mt-2" action="<?= $SITE_URL ?>/hang-hoa/liet-ke.php">
+                    <input class="form-control-sm form-control" name="keywords" placeholder="Từ khóa tìm kiếm">
+                    <button class="btn btn-primary btn-sm">search</button>
+                </form>
+            </div>
+            <div class="ml-5">
+                <a class="d-inline-block nav-link pl-0 text-light" href="<?= $SITE_URL ?>/tai-khoan/dang-nhap.php">Đăng nhập</a>
+                <a class="d-inline-block nav-link pl-0 text-light" href="<?= $SITE_URL ?>/tai-khoan/dang-ky.php">Đăng ký</a>
+                <a class="d-inline-block nav-link pl-0 text-light" href="<?= $SITE_URL ?>/tai-khoan/dang-nhap.php?btn_logoff">Đăng xuất</a>
+                <?php
+                if (isset($_SESSION['user'])) {
+                    if ($_SESSION['user']['vai_tro'] == TRUE) {
+                ?>
+                        <a class="d-inline-block nav-link pl-0 text-light" href='<?= $ADMIN_URL ?>/trang-chinh'>Quản trị website</a>
+                <?php
                     }
-                    ?>
-                </div>
+                }
+                ?>
             </div>
-            <?php
-            if (isset($_SESSION['user'])) {
-                $temp = 'd-flex justify-content-center';
-                $temp1 = 'ml-5';
-            } else {
-                $temp = 'container';
-                $temp1 = '';
-            }
-            ?>
-            <div class="<?= $temp ?>">
+        </div>
+        <?php
+        if (isset($_SESSION['user'])) {
+            $temp = 'd-flex justify-content-center';
+            $temp1 = 'ml-5';
+        } else {
+            $temp = 'container';
+            $temp1 = '';
+        }
+        ?>
+        <div class="<?= $temp ?>">
 
-                <nav class="<?= $temp1 ?> navbar navbar-expand-lg p-0">
-                    <?php require 'layout/menu.php'; ?>
-                </nav>
-            </div>
-        </header>
-        <div class="container">
-            <div>
-                <?php require $VIEW_NAME; ?>
-            </div>
+            <nav class="<?= $temp1 ?> navbar navbar-expand-lg p-0">
+                <?php require 'layout/menu.php'; ?>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div>
+            <?php require $VIEW_NAME; ?>
         </div>
     </div>
     <!-- footer -->

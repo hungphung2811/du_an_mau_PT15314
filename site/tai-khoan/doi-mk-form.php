@@ -7,10 +7,10 @@
             <h4 class="text-center mb-3">ĐỔI MẬT KHẨU</h4>
             <?php
             if (strlen($MESSAGE)) {
-                echo "<h5>$MESSAGE</h5>";
+                echo "<h6 class='text-danger'>$MESSAGE</h6>";
             }
             ?>
-            <div class="jumbotron jumbotron-fluid px-4 py-2">
+            <div class="jumbotron bg-light jumbotron-fluid px-4 py-2">
                 <form class="form-group" action="doi-mk.php" method="post">
                     <div>
                         <label>Tên đăng nhập</label>

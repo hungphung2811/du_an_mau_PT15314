@@ -24,7 +24,7 @@
                     <?php
                     if (!isset($_SESSION['user'])) {
                     ?>
-                        <a class="dropdown-item" href="#">Quên mật khẩu</a>
+                        <a class="dropdown-item" href="<?= $SITE_URL ?>/tai-khoan/quen-mk.php">Quên mật khẩu</a>
                     <?php
                     } else {
                     ?>

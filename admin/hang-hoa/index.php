@@ -10,7 +10,7 @@ extract($_REQUEST);
 
 if (exist_param("btn_insert")) {
     $err_new = [];
-    $bieu_thuc_ten_hh = '/^[a-zA-Z0-9_]{3,}$/';
+    $bieu_thuc_ten_hh = '/^[a-zA-Z0-9]{6,30}$/';
     if (!preg_match($bieu_thuc_ten_hh, $ten_hh)) {
         $err_new[] = 'Tên hàng hóa phải từ 3 kí tự trở lên !';
     }

@@ -7,29 +7,33 @@
         <div class="offset-1">
             <?php
             if (strlen($MESSAGE)) {
-                echo "<h5>$MESSAGE</h5>";
+                echo "<h6 class='text-danger'>$MESSAGE</h6>";
             }
             ?>
         </div>
-        <div class="jumbotron col-10 offset-1 p-4 jumbotron-fluid">
+        <div class="jumbotron bg-light col-10 offset-1 p-4 jumbotron-fluid">
             <form class="form-group" action="cap-nhat-tk.php" method="post" enctype="multipart/form-data">
                 <div>
                     <div>
                         <div class="row text-center">
                             <div class="col-6">
                                 <label>AVATAR</label>
-                                <img class="d-block img-fluid mx-auto mt-2" width="150" src="<?= $CONTENT_URL ?>/images/users/<?= $hinh ?>" style="max-width: 95%">
+                                <img class="d-block img-fluid mx-auto mt-2" width="50" src="<?= $CONTENT_URL ?>/images/users/<?= $hinh ?>" style="max-width: 95%">
                             </div class="col-6">
                             <div class="col-6">
                                 <p>HÌNH SẼ UPDATE</p>
-                                <span class="text-info">( Chưa có gì cả ! )</span>
-                                <span class="text-info d-block">hãy upload bằng cách chọn tệp</span>
+                                <div id="result_image">
+                                    <div id="desc">
+                                        <span class="text-info">( Chưa có gì cả ! )</span>
+                                        <span class="text-info d-block">hãy upload bằng cách chọn tệp</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div>
                         <label class="mt-3">Hình thay đổi</label>
-                        <input class="form-control" name="up_hinh" type="file">
+                        <input class="form-control" name="up_hinh" id="hinh" type="file">
                     </div>
                     <div>
                         <label class="mt-3">Tên đăng nhập</label>
@@ -58,6 +62,7 @@
             </form>
         </div>
     </div>
+    <script src="<?= $CONTENT_URL ?>/js/site/tai-khoan/dangKy.js"></script>
 </body>
 
 </html>

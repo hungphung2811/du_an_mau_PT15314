@@ -7,7 +7,7 @@
         <div class="col-10 offset-1">
             <?php
             if (strlen($MESSAGE)) {
-                echo "<h5 class='text-danger'>$MESSAGE</h5>";
+                echo "<h6 class='text-danger'>$MESSAGE</h6>";
             }
             ?>
             <div class="jumbotron jumbotron-fluid bg-light px-4 py-2 border shadow">
@@ -35,12 +35,16 @@
                     <div class="row">
                         <div class="col-6">
                             <label class="mt-3">Hình</label>
-                            <input class="form-control" name="up_hinh" type="file">
+                            <input class="form-control" id="hinh" name="up_hinh" type="file">
                         </div>
                         <div class="col-6">
-                            <label class="mt-4">HÌNH SẼ UPDATE</label>
-                            <span>( Chưa có ảnh nào )</span>
-                            <span class="text-info d-block">hãy upload bằng cách chọn tệp</span>
+                            <label class="mt-4 text-center ml-5">Hình sẽ tải lên</label>
+                            <div id="result_image" class="ml-5">
+                                <div id="desc">
+                                    <span>( Chưa có ảnh nào )</span>
+                                    <span class="text-info d-block">hãy upload bằng cách chọn tệp</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="text-center mt-5">
@@ -53,6 +57,7 @@
             </div>
         </div>
     </div>
+    <script src="<?= $CONTENT_URL ?>/js/site/tai-khoan/dangKy.js"></script>
 </body>
 
 </html>
