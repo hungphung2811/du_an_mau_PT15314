@@ -15,7 +15,7 @@
     <!-- link js -->
     <script src="<?= $CONTENT_URL ?>/js/xshop-list.js"></script>
     <!-- link css  -->
-    <link rel="stylesheet" href="<?= $CONTENT_URL ?>/css/style.css">
+    <link rel="stylesheet" href="<?= $CONTENT_URL ?>/css/main.css">
 </head>
 
 <body>
