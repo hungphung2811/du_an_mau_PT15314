@@ -10,9 +10,7 @@ if (exist_param("btn_change")) {
     $err = [];
     $bieu_thuc_ma_kh = '/^[a-zA-Z0-9_]{5,30}$/';
     $bieu_thuc_email = '/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/';
-    $bieu_thuc_ho_ten = '/^[a-zA-Z_ àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐD]{1,}$/';
     $user = khach_hang_select_by_id($ma_kh);
-    // $bieu_thuc_dt = '/^(0)+(32|33|34|35|36|37|38|39|56|58|59|70|76|77|78|79|81|82|83|84|85|86|88|89|90|91|92|93|94|96|97|98|99)+([0-9]){7}$/';
     if (!preg_match($bieu_thuc_ma_kh, $ma_kh)) {
         $err[] =  "Sai !. tên đăng nhập phải từ 5 -> 30 kí tự và không chứa các kí tự đặc biệt";
     } else if (!khach_hang_exist($ma_kh)) {
