@@ -54,7 +54,7 @@
                             <td><?= $ma_hh ?></td>
                             <td><?= $ten_hh ?></td>
                             <td>$<?= number_format($don_gia, 2) ?></td>
-                            <td><?= number_format($giam_gia * 100) ?>%</td>
+                            <td><?= number_format($giam_gia) ?>%</td>
                             <td>
                                 <img width="100" class="img-fluid" src="<?= $CONTENT_URL ?>/images/products/<?= $hinh ?>" alt="photo">
                             </td>

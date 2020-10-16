@@ -30,6 +30,7 @@ if (exist_param("btn_insert")) {
     $VIEW_NAME = "hang-hoa/new.php";
 } else if (exist_param("btn_update")) {
     $err_update = [];
+    
     if (!preg_match($bieu_thuc_ten_hh, $ten_hh)) {
         $err_update[] = 'Tên hàng hóa phải từ 3 kí tự trở lên !';
     }

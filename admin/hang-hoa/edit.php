@@ -6,7 +6,7 @@
     </div>
     <?php
     if (strlen($MESSAGE)) {
-        echo "<h5>$MESSAGE</h5>";
+        echo "<h6 class='text-danger'>$MESSAGE</h6>";
     }
     ?>
     <div class="jumbotron py-3">
