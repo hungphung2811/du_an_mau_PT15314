@@ -24,7 +24,7 @@ if (exist_param("btn_update")) {
         $err[] = "Bạn nhập ảnh quá lớn .  ";
     }
 
-    if ($type != 'image/jpeg' || $type != 'image/png' || $type != 'image/bmp') {
+    if (!($type == 'image/jpeg' || $type == 'image/png' || $type == 'image/bmp')) {
         $err[] = "Nếu muốn update ảnh mới vui lòng nhập ảnh có định dạng jpeg , png hoặc bmp ";
     }
 
