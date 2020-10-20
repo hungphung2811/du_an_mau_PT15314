@@ -55,7 +55,9 @@
     <header class="bg-info p-3 pb-4 text-light jumbotron shadow">
         <div class="d-flex justify-content-start ml-5">
             <div class="mr-5 ml-5">
-                <img class="ml-5" src="https://salt.tikicdn.com/ts/banner/33/ba/89/54c02d2475983f93a024c0cd13f238e4.png" alt="logo tiki ">
+                <a href="/xshop12/xshop/site/trang-chinh/?trang-chu">
+                    <img class="ml-5" src="https://salt.tikicdn.com/ts/banner/33/ba/89/54c02d2475983f93a024c0cd13f238e4.png" alt="logo tiki ">
+                </a>
             </div>
             <div class="form-group form-inline">
                 <form class="mt-2" action="<?= $SITE_URL ?>/hang-hoa/liet-ke.php">

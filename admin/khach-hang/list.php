@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid px-5">
         <div class="text-center">
             <h3>QUẢN LÝ KHÁCH HÀNG</h3>
             <p class="lead">Danh sánh khách hàng</p>
