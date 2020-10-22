@@ -3,7 +3,7 @@ require_once "../../global.php";
 require_once "../../dao/thong-ke.php";
 //--------------------------------//
 
-// check_login();
+check_login();
 
 
 if (exist_param("chart")) {

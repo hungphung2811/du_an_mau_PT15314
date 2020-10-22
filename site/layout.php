@@ -66,13 +66,20 @@
                 </form>
             </div>
             <div class="ml-5">
-                <a class="d-inline-block nav-link pl-0 text-light" href="<?= $SITE_URL ?>/tai-khoan/dang-nhap.php">Đăng nhập</a>
-                <a class="d-inline-block nav-link pl-0 text-light" href="<?= $SITE_URL ?>/tai-khoan/dang-ky.php">Đăng ký</a>
-                <a class="d-inline-block nav-link pl-0 text-light" href="<?= $SITE_URL ?>/tai-khoan/dang-nhap.php?btn_logoff">Đăng xuất</a>
                 <?php
+                if (!isset($_SESSION['user'])) {
+                ?>
+                    <a class="d-inline-block nav-link pl-0 text-light" href="<?= $SITE_URL ?>/tai-khoan/dang-nhap.php">Đăng nhập</a>
+                    <a class="d-inline-block nav-link pl-0 text-light" href="<?= $SITE_URL ?>/tai-khoan/dang-ky.php">Đăng ký</a>
+                <?php
+                } else {
+                ?>
+                    <a class="d-inline-block nav-link pl-0 text-light" href="<?= $SITE_URL ?>/tai-khoan/dang-nhap.php?btn_logoff">Đăng xuất</a>
+                    <?php
+                }
                 if (isset($_SESSION['user'])) {
                     if ($_SESSION['user']['vai_tro'] == TRUE) {
-                ?>
+                    ?>
                         <a class="d-inline-block nav-link pl-0 text-light" href='<?= $ADMIN_URL ?>/trang-chinh'>Quản trị website</a>
                 <?php
                     }
@@ -80,18 +87,10 @@
                 ?>
             </div>
         </div>
-        <?php
-        if (isset($_SESSION['user'])) {
-            $temp = 'd-flex justify-content-center';
-            $temp1 = 'ml-5';
-        } else {
-            $temp = 'container';
-            $temp1 = '';
-        }
-        ?>
-        <div class="<?= $temp ?>">
+        
+        <div class="container">
 
-            <nav class="<?= $temp1 ?> navbar navbar-expand-lg p-0">
+            <nav class="navbar navbar-expand-lg p-0">
                 <?php require 'layout/menu.php'; ?>
             </nav>
         </div>

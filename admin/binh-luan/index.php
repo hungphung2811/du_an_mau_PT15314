@@ -4,7 +4,7 @@ require "../../dao/binh-luan.php";
 require "../../dao/thong-ke.php";
 //--------------------------------//
 
-// check_login();
+check_login();
 
 extract($_REQUEST);
 

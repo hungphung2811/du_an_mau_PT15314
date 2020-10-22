@@ -20,14 +20,19 @@
                         <label class="mt-3">Mật khẩu</label>
                         <input class="form-control" name="mat_khau" type="password" value="<?= $mat_khau ?>">
                     </div>
-                    <div class="mt-3">
+                    <div class="mt-3 d-flex justify-content-between">
                         <label>
                             <input name="ghi_nho" type="checkbox" checked>
                             Ghi nhớ tài khoản?
                         </label>
+                        <div class="text-right">
+                            <a href="<?= $SITE_URL ?>/tai-khoan/dang-ky.php">Đăng ký</a>
+                            <a class="mx-3" href="<?= $SITE_URL ?>/tai-khoan/quen-mk.php">Quên mật khẩu</a>
+                        </div>
                     </div>
                     <div class="text-center">
                         <button class="btn btn-primary mt-3" name="btn_login">Đăng nhập</button>
+
                     </div>
                 </form>
             </div>
