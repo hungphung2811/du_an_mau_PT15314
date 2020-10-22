@@ -18,7 +18,7 @@
                     </div>
                     <div>
                         <label class="mt-3">ngay thang</label>
-                        <input class="form-control" name="ngay_sinh" type="date" value="<?= $ngay ?>">
+                        <input class="form-control" name="ngay_sinh" type="" value="<?= $ngay_sinh ?>">
                     </div>
                     <div>
                         <label class="mt-3">Mật khẩu</label>
@@ -39,7 +39,7 @@
                     <div class="row">
                         <div class="col-6">
                             <label class="mt-3">Hình</label>
-                            <input class="form-control" id="hinh" name="up_hinh" type="file">
+                            <input class="form-control" id="hinh" value="<?= $hinh ?>" name="up_hinh" type="file">
                         </div>
                         <div class="col-6">
                             <label class="mt-4 text-center ml-5">Hình sẽ tải lên</label>

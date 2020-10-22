@@ -53,15 +53,19 @@ if (exist_param("btn_register")) {
     } else {
         $file_name = save_file("up_hinh", "$IMAGE_DIR/users/");
         $hinh = $file_name ? $file_name : "user.png";
+        $temp = explode('/', $ngay_sinh);
+        $temp = array_reverse($temp);
+        $ngay_sinh = implode('-', $temp);
         try {
-            khach_hang_insert($ma_kh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat,$vai_tro, $ngay_sinh);
+
+            khach_hang_insert($ma_kh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat, $vai_tro, $ngay_sinh);
             $MESSAGE = "Đăng ký thành viên thành công!";
         } catch (Exception $exc) {
             $MESSAGE = "Đăng ký thành viên thất bại!" . $exc->getMessage();
         }
     }
 } else {
-    global $ma_kh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat, $vai_tro, $mat_khau2;
+    global $ma_kh, $ngay_sinh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat, $vai_tro, $mat_khau2;
 }
 
 $VIEW_NAME = "tai-khoan/dang-ky-form.php";
