@@ -17,6 +17,10 @@
                         <input class="form-control" name="ma_kh" value="<?= $ma_kh ?>">
                     </div>
                     <div>
+                        <label class="mt-3">ngay thang</label>
+                        <input class="form-control" name="ngay_sinh" type="date" value="<?= $ngay ?>">
+                    </div>
+                    <div>
                         <label class="mt-3">Mật khẩu</label>
                         <input class="form-control" name="mat_khau" type="password" value="<?= $mat_khau ?>">
                     </div>
