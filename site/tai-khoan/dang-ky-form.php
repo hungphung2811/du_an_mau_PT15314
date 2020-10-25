@@ -7,6 +7,7 @@
         <div class="col-10 offset-1">
             <?php
             if (strlen($MESSAGE)) {
+                echo "<h6 class='text-info mb-3'>$error[ma_gioi_thieu]</h6>";
                 echo "<h6 class='text-danger'>$MESSAGE</h6>";
             }
             ?>
@@ -19,6 +20,10 @@
                     <div>
                         <label class="mt-3">ngay thang</label>
                         <input class="form-control" name="ngay_sinh" type="" value="<?= $ngay_sinh ?>">
+                    </div>
+                    <div>
+                        <label class="mt-3">ma gioi thieu</label>
+                        <input class="form-control" name="ma_gioi_thieu" type="" value="<?= $ma_gioi_thieu ?>">
                     </div>
                     <div>
                         <label class="mt-3">Mật khẩu</label>

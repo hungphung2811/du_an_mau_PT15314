@@ -48,6 +48,12 @@ if (exist_param("btn_register")) {
         $err[] = "Hãy nhập ảnh có định dạng jpeg , png hoặc bmp ";
     }
 
+    if (!khach_hang_exist($ma_gioi_thieu)) {
+        $error['ma_gioi_thieu']= "ma gioi thieu <span class='font-weight-bold'> khong ton tai <span>";
+    }else{
+        $error['ma_gioi_thieu'] = "ma gioi thieu <span class='font-weight-bold'> ton tai <span>";
+    }
+
     if (!empty($err)) {
         $MESSAGE = implode("<br>", $err);
     } else {
@@ -65,7 +71,7 @@ if (exist_param("btn_register")) {
         }
     }
 } else {
-    global $ma_kh, $ngay_sinh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat, $vai_tro, $mat_khau2;
+    global $ma_kh, $ngay_sinh,$ma_gioi_thieu, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat, $vai_tro, $mat_khau2;
 }
 
 $VIEW_NAME = "tai-khoan/dang-ky-form.php";
