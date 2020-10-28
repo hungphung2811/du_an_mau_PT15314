@@ -87,7 +87,7 @@ function hang_hoa_select_page12()
 
 function hang_hoa_select_page()
 {
-    $row_per_page = 12;
+    $row_per_page = 3;
     $current_page = exist_param("page_no") ? $_REQUEST['page_no'] : 1;
 
     $total_row = pdo_query_value("SELECT count(*) FROM hang_hoa");

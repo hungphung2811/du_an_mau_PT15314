@@ -17,6 +17,24 @@
                     <input class="form-control" id="ma_kh" name="ma_kh" value="<?= $ma_kh ?>" readonly>
                     <span id="error_ma_kh"></span>
                 </div>
+                <div class="col-6">
+                    <label class="mt-3">Giới tính</label>
+                    <div class="form-control">
+                        <label>
+                            <input class="mr-2" <?= !$gioi_tinh ? 'checked' : '' ?> name="gioi_tinh" value="0" type="radio">
+                           nam
+                        </label>
+                        <label>
+                            <input class="mr-2 ml-5" <?= $gioi_tinh ? 'checked' : '' ?> name="gioi_tinh" value="1" type="radio">
+                           Nữ
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <label class="mt-3">so cmnd</label>
+                    <input class="form-control" id="ma_kh" name="so_cmnd" value="<?= $so_cmnd ?>">
+                </div>
 
                 <div class="col-6">
                     <label class="mt-3">HỌ VÀ TÊN</label>

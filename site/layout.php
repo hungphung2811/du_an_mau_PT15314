@@ -29,8 +29,6 @@
         }
 
         .swiper-slide {
-
-            text-align: center;
             font-size: 18px;
             background: #fff;
 
@@ -87,7 +85,7 @@
                 ?>
             </div>
         </div>
-        
+
         <div class="container">
 
             <nav class="navbar navbar-expand-lg p-0">
@@ -200,7 +198,7 @@
             spaceBetween: 30,
             loop: true,
             autoplay: {
-                delay: 2000,
+                delay: 2500,
                 disableOnInteraction: false,
             },
             pagination: {

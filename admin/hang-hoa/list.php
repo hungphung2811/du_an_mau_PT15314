@@ -18,7 +18,7 @@
         }
         ?>
 
-        <nav aria-label="Page navigation example">
+        <nav class="mb-2" aria-label="Page navigation example">
             <ul class="list-group list-group-horizontal">
                 <li class="list-group-item"><a href="?btn_list&page_no=1">|&lt;</a></li>
                 <li class="list-group-item"><a href="?btn_list&page_no=<?= $_SESSION['prev_page'] ?>">
@@ -60,8 +60,10 @@
                             </td>
                             <td><?= $so_luot_xem ?></td>
                             <td>
-                                <a class="btn btn-primary" href="index.php?btn_edit&ma_hh=<?= $ma_hh ?>">Sửa</a>
-                                <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa ?')" href="index.php?btn_delete&ma_hh=<?= $ma_hh ?>">Xóa</a>
+                                <div class="d-flex">
+                                    <a class="btn btn-sm mr-1 btn-primary" href="index.php?btn_edit&ma_hh=<?= $ma_hh ?>">Sửa</a>
+                                    <a class="btn btn-sm btn-danger" onclick="return confirm('Bạn có muốn xóa ?')" href="index.php?btn_delete&ma_hh=<?= $ma_hh ?>">Xóa</a>
+                                </div>
                             </td>
                         </tr>
                     <?php
